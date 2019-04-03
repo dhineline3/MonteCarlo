@@ -1,0 +1,30 @@
+# MonteCarlo
+
+1. Why do we multiply the value from step 5 above by 4?
+
+In 4 you're generating random points inside the square say C being the number of points
+that fall within the unit circle and N being the total number of points
+generated. As the number N gets large, the quantity C/N approximates the 
+ratio of the area of the circle to the square, which is π/4. Hence, we can
+use the ratio 4*C/N to approximate π.
+
+2. What do you observe in the output when running your program with parameters of increasing size?
+
+The larger your sample size, the more the generated points there are inside and outside the circle, creating a generated π
+that is closer and closer to actual π value of 3.14159265359 etc.
+
+3.	If you run the program multiple times with the same parameter, does the output remain the same? Why or why not?
+
+No it does not. This happens because the program is throwing RANDOM points every time. It isn't throwing the same points in the same
+location consistently.
+
+4. Find a parameter that requires multiple seconds of run time. What is that parameter? How accurate is the estimated value of π?
+
+For my program this value was 1 followed by 8 zeros or 100,000,000. I simply went up by increments of 10. The difference became
+noticable when I went from 1,000,000 to 10,000,000 and then to 100,000,000. The estimated value of π is approximately 3.14135116
+or having a difference of 0.000241493589. Accurate to the thousandth place.
+
+5.	Research one other use of Monte-Carlo methods. Record it in your exercise submission and be prepared to discuss it in class.
+
+Simplest use for Monte Carlo method would be in an application of blackjack in casinos and how your odds affect your choices. You could
+also apply game theory to such things as chess by using the monte carlo method to analyze possibilities of choices against an opponent.
